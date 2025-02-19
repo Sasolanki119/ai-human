@@ -1,0 +1,108 @@
+/* Body background settings */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  /* Set the background image; fallback color removed as it was overridden */
+  background: url('../assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  /* Ensure positioning for pseudo-elements */
+}
+
+/* Semi-transparent overlay for the background */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(107, 107, 203, 0.241);
+  pointer-events: none;
+}
+
+/* App container styling if needed */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Login container styling */
+.login-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  /* Adjust width as needed; 'auto' works better for responsiveness than 'max-content' */
+  width: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  /* Ensure the container is above the overlay */
+}
+
+/* Header styling */
+.login-container h1 {
+  margin-bottom: 20px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+/* Login-box styling for inputs and button grouping */
+.login-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input field styles */
+.login-container input[type="email"],
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 90%;
+  /* Slightly smaller than the container for padding */
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Button styling */
+.login-container button {
+  background: #b8f3ef98;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Button hover effect */
+.login-container button:hover {
+  background: #3c8a98a0;
+}
+
+/* Additional options container if needed */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

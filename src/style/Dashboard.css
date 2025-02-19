@@ -1,0 +1,62 @@
+.dashboard-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    width: max-content;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+
+.round.completed {      
+    color: green;
+    font-weight: bolder;
+}
+
+.round.pending {
+    color: yellow;
+    font-weight: bolder;
+}
+
+.round.locked {
+    color: red;
+    font-weight: bolder;
+}
+
+.dashboard-container h1,h2 {
+    font-weight: bolder;
+    font-size: 70px;
+    font-weight: bolder;
+    background: url('../assets/dash_bg.png') no-repeat center;
+     background-size: cover;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    text-align: center;    
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
